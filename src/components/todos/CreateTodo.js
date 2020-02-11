@@ -13,6 +13,10 @@ class CreateTodo extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.addTodo(this.state)
+    // setState so that the form resets to a blank value upon submission
+    this.setState({
+      text: ''
+    })
   }
 
   handleChange(event) {
